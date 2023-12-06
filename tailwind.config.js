@@ -31,6 +31,19 @@ module.exports = {
       "night",
       "coffee",
       "winter",
+      {
+        rio: {
+          "primary": "#efd799",
+          "secondary": "#a1e549",
+          "accent": "#f7b9d4",
+          "neutral": "#18151e",
+          "base-100": "#f0f0f0",
+          "info": "#5296eb",
+          "success": "#0f7056",
+          "warning": "#ce7d12",
+          "error": "#e46462",
+        },
+      },
     ],
   },
   content: [
