@@ -21,6 +21,6 @@ Route::get('/page2', function () {
     return view('page.page2');
 });
 
-Route::get('/pupuk', function () {
+Route::get('/estate', function () {
     return view('page.pupuk.index');
 });

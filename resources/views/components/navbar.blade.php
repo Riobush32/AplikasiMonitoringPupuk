@@ -9,10 +9,31 @@
                 </svg>
             </label>
         </div>
-        <div class="flex-1">
-            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <div class="flex-1 ml-10">
+            <img class="mask mask-squircle w-12" src="{{ asset('img/bsp-logo-png.png') }}" />
+            <a class="btn btn-ghost normal-case text-xl">Bakerie Sumatera Plantations</a>
         </div>
         
+        {{-- <div class="dropdown dropdown-bottom dropdown-end">
+            <div tabindex="12" role="button" class="btn btn-sm btn-ghost m-1">
+                <span class="material-symbols-outlined">
+                    burst_mode
+                </span>
+            </div>
+                <ul tabindex="12" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
+                    <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                            aria-label="Default" value="default" /></li>
+                    <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                            aria-label="Retro" value="retro" /></li>
+                    <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                            aria-label="Cyberpunk" value="cyberpunk" /></li>
+                    <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                            aria-label="Valentine" value="valentine" /></li>
+                    <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                            aria-label="Aqua" value="aqua" /></li>
+                </ul>
+        </div>
+        <script src="{{ asset('js/script.js') }}"></script> --}}
         
     </div>
 
