@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EstateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::get('/page2', function () {
     return view('page.page2');
 });
 
-Route::get('/estate', function () {
-    return view('page.pupuk.index');
-});
+
+// estate route 
+
+Route::get('/estate', [EstateController::class, 'index']);

@@ -9,31 +9,34 @@
                 </svg>
             </label>
         </div>
-        <div class="flex-1 ml-10">
+        <div class="flex-1 hidden md:flex ml-9">
             <img class="mask mask-squircle w-12" src="{{ asset('img/bsp-logo-png.png') }}" />
-            <a class="btn btn-ghost normal-case text-xl">Bakerie Sumatera Plantations</a>
+            <a class="btn btn-ghost normal-case text-xl ">Bakerie Sumatera Plantations</a>
+        </div>
+        <div class="flex-1 md:hidden ">
+                    <img class="mask mask-squircle w-12" src="{{ asset('img/bsp-logo-png.png') }}" />
+                    <a class="btn btn-ghost normal-case text-xl md:hidden">BSP</a>
         </div>
         
-        {{-- <div class="dropdown dropdown-bottom dropdown-end">
+        <div class="dropdown dropdown-bottom dropdown-end">
             <div tabindex="12" role="button" class="btn btn-sm btn-ghost m-1">
                 <span class="material-symbols-outlined">
                     burst_mode
                 </span>
             </div>
-                <ul tabindex="12" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
+                <ul tabindex="12" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52 z-40">
                     <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Default" value="default" /></li>
+                            aria-label="cmyk" value="cmyk" data-set-theme="cmyk" data-act-class="ACTIVECLASS"/></li>
                     <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Retro" value="retro" /></li>
+                            aria-label="cupcake" value="cupcake" data-set-theme="cupcake" data-act-class="ACTIVECLASS"/></li>
                     <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Cyberpunk" value="cyberpunk" /></li>
+                            aria-label="emerald" value="emerald" data-set-theme="emerald" data-act-class="ACTIVECLASS"/></li>
                     <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Valentine" value="valentine" /></li>
+                            aria-label="garden" value="garden" data-set-theme="garden" data-act-class="ACTIVECLASS"/></li>
                     <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                            aria-label="Aqua" value="aqua" /></li>
+                            aria-label="lemonade" value="lemonade" data-set-theme="lemonade" data-act-class="ACTIVECLASS"/></li>
                 </ul>
         </div>
-        <script src="{{ asset('js/script.js') }}"></script> --}}
         
     </div>
 
