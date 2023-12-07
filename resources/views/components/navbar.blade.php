@@ -24,7 +24,7 @@
                     burst_mode
                 </span>
             </div>
-                <ul tabindex="12" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52 z-40">
+                <ul tabindex="12" class="dropdown-content p-2 shadow-2xl bg-base-300 rounded-box w-52 z-40">
                     <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
                             aria-label="cmyk" value="cmyk" data-set-theme="cmyk" data-act-class="ACTIVECLASS"/></li>
                     <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
