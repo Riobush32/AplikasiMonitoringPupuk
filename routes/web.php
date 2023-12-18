@@ -26,3 +26,4 @@ Route::get('/page2', function () {
 // estate route 
 
 Route::get('/estate', [EstateController::class, 'index']);
+Route::post('/estate', [EstateController::class, 'create']);
