@@ -25,6 +25,27 @@ class EstateController extends Controller
         return back();
     }
 
+    public function update(Request $re, $id)
+    {
+        $estate = Estate::find($id);
+
+        $estate->update([
+            'estate' => $re->estate,
+        ]);
+
+        return back();
+    }
+
+
+    public function destroy($id)
+    {
+        $estate = Estate::find($id);
+
+        $estate->delete();
+        return back();
+
+    }
+
 }
 
 

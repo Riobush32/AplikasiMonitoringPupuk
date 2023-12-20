@@ -27,3 +27,5 @@ Route::get('/page2', function () {
 
 Route::get('/estate', [EstateController::class, 'index']);
 Route::post('/estate', [EstateController::class, 'create']);
+Route::patch('/estate/{id}/update', [EstateController::class, 'update']);
+Route::delete('/estate/{id}/destroy', [EstateController::class, 'destroy']);

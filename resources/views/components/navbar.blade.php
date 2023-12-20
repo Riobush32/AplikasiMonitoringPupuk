@@ -1,5 +1,5 @@
 
-    <div class="navbar bg-base-100 shadow-lg w-[98vw] rounded-lg mt-2 mx-auto">
+    <div class="navbar bg-base-100 shadow-lg w-[98vw] rounded-lg mt-2 mx-auto z-30">
         <div class="flex-none">
             <label for="my-drawer-4" class="btn btn-square btn-ghost drawer-button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
