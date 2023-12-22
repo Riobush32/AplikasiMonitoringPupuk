@@ -9,7 +9,8 @@
         <div class="card-body">
             <h2 class="card-title">{{ $n; }} {{ $item->estate }}</h2>
 
-            @include('page.estate.control-button')
+            @include('components.control-button')
+            
         </div>
     </div>
     @endforeach

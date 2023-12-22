@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\EstateController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FieldController;
+use App\Http\Controllers\EstateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,10 @@ Route::get('/estate', [EstateController::class, 'index']);
 Route::post('/estate', [EstateController::class, 'create']);
 Route::patch('/estate/{id}/update', [EstateController::class, 'update']);
 Route::delete('/estate/{id}/destroy', [EstateController::class, 'destroy']);
+
+// Field Route
+
+Route::get('/estate/{id}', [FieldController::class, 'index']);
+Route::post('/field', [FieldController::class, 'create']);
+Route::patch('field/{id}/update', [FieldController::class, 'update']);
+Route::delete('/field/{id}/destroy', [FieldController::class, 'destroy']);

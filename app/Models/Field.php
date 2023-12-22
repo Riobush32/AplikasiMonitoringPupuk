@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Estate extends Model
+class Field extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function field()
+    public function estate()
     {
-        return $this->hasMany(Field::class);
+        return $this->belongsTo(Estate::class);
     }
 }

@@ -5,7 +5,10 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <td>Estate</td>
+                    <td>Field No</td>
+                    <td>Field Bantu</td>
+                    <td>Hektar</td>
+                    <td>Treess</td>
                     <th></th>
                 </tr>
             </thead>
@@ -15,7 +18,10 @@
                 <?php $n++; ?>
                 <tr>
                     <th>{{ $n; }}</th>
-                    <td>{{ $item->estate }}</td>
+                    <td>{{ $item->field_no }}</td>
+                    <td>{{ $item->field_bantu }}</td>
+                    <td>{{ $item->hektar }}</td>
+                    <td>{{ $item->treess }}</td>
                     <td>
                         @include('components.control-button')
                     </td>
@@ -26,7 +32,10 @@
             <tfoot>
                 <tr>
                     <th>No</th>
-                    <td>Estate</td>
+                    <td>Field No</td>
+                    <td>Field Bantu</td>
+                    <td>Hektar</td>
+                    <td>Treess</td>
                     <th></th>
                 </tr>
             </tfoot>
