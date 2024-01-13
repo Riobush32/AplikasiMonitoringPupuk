@@ -21,42 +21,18 @@
                     <form method="dialog">
                         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 class="font-bold text-lg">Add Field</h3>
-                    <form action="{{ url('/field') }}" method="POST">
+                    <h3 class="font-bold text-lg">Add {{ $title }}</h3>
+                    <form action="{{ url('/pupuk') }}" method="POST">
                         @csrf
-                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="divisi" value="{{ $divisi }}"/>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
-                                <span class="label-text">Field No</span>
+                                <span class="label-text">Pupuk</span>
                             </div>
                             <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="field_no" />
+                                name="pupuk" />
 
                         </label>
-                        <label class="form-control w-full max-w-xs">
-                            <div class="label">
-                                <span class="label-text">Field Bantu</span>
-                            </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="field_bantu" />
 
-                        </label>
-                        <label class="form-control w-full max-w-xs">
-                            <div class="label">
-                                <span class="label-text">Hektar</span>
-                            </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="hektar" />
-
-                        </label>
-                        <label class="form-control w-full max-w-xs">
-                            <div class="label">
-                                <span class="label-text">Treess</span>
-                            </div>
-                            <input type="number" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="treess" />
-
-                        </label>
 
                         <div class="modal-action">
                             <button class="btn btn-primary btn-outline" type="submit">

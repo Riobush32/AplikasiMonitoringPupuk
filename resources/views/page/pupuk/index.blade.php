@@ -1,5 +1,12 @@
 @extends('main')
 
 @section('content')
-<h1>Ini Page pupuk</h1>
+
+@include('page.pupuk.create')
+{{-- laptop display --}}
+@include('page.pupuk.laptop')
+@include('page.pupuk.update')
+@include('page.pupuk.delete')
+
+
 @endsection

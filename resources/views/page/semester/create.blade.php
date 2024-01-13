@@ -21,42 +21,29 @@
                     <form method="dialog">
                         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 class="font-bold text-lg">Add Field</h3>
-                    <form action="{{ url('/field') }}" method="POST">
+                    <h3 class="font-bold text-lg">Add {{ $title }}</h3>
+                    <form action="{{ url('/semester') }}" method="POST">
                         @csrf
-                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="divisi" value="{{ $divisi }}"/>
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="field_id" value="{{ $field }}"/>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
-                                <span class="label-text">Field No</span>
+                                <span class="label-text">Semester</span>
                             </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="field_no" />
-
+                            <select class="input input-bordered" name="semester">
+                                <option disabled selected>Semester Ke?</option>
+                                <option value="1">1 (satu)</option>
+                                <option value="2">2 (dua)</option>
+                            </select>
                         </label>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
-                                <span class="label-text">Field Bantu</span>
+                                <span class="label-text">Tanggal</span>
                             </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="field_bantu" />
+                            <input type="date" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                                name="date" />
 
                         </label>
-                        <label class="form-control w-full max-w-xs">
-                            <div class="label">
-                                <span class="label-text">Hektar</span>
-                            </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="hektar" />
 
-                        </label>
-                        <label class="form-control w-full max-w-xs">
-                            <div class="label">
-                                <span class="label-text">Treess</span>
-                            </div>
-                            <input type="number" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="treess" />
-
-                        </label>
 
                         <div class="modal-action">
                             <button class="btn btn-primary btn-outline" type="submit">

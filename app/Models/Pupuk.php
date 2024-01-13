@@ -5,15 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Estate extends Model
+class Pupuk extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
 
-    public function divisi()
-    {
-        return $this->hasMany(divisi::class);
-    }
 }

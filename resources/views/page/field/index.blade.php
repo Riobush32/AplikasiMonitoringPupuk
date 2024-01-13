@@ -3,8 +3,6 @@
 @section('content')
 
 @include('page.field.create')
-
-
 {{-- laptop display --}}
 @include('page.field.laptop')
 {{-- smartphone display --}}

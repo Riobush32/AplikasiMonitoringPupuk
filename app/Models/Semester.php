@@ -5,19 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Field extends Model
+class Semester extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function divisis()
+    public function fields()
     {
-        return $this->belongsTo(Divisi::class);
+        return $this->belongsTo(Field::class);
     }
 
-    public function semester()
+    public function datapemupukan()
     {
-        return $this->hasMany(Semester::class);
+        return $this->hasMany(DataPemupukan::class);
     }
 }

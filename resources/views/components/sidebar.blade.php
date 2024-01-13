@@ -27,14 +27,23 @@
                             </span>
                         </div>
                     </a>
+                    {{-- pupuk--}}
+                    <a href="{{ url('/pupuk') }}"
+                        class="sidebar-button items-center flex font-bold {{ $active == 'pupuk' ? 'bg-primary' : '' }}">
+                        <div class="ml-5 items-center flex text-sm">
+                            <span class="material-symbols-outlined">
+                                warehouse
+                            </span>
+                            <span class="ml-3">
+                                Pupuk
+                            </span>
+                        </div>
+                    </a>
                 </div>
+
             </div>
         </div>
         
-        {{-- <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-            <!-- Sidebar content here -->
-            <li><a>Sidebar Item 1</a></li>
-            <li><a>Sidebar Item 2</a></li>
-        </ul> --}}
+
     </div>
 </div>

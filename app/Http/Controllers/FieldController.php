@@ -12,15 +12,15 @@ class FieldController extends Controller
         return view('page.field.index', [
             'title' => 'Field',
             'active' => 'field',
-            'estate' => $id,
-            'data' => Field::where('estate_id', $id)->latest()->get()
+            'divisi' => $id,
+            'data' => Field::where('divisi_id', $id)->latest()->get()
         ]);
     }
 
     public function create (Request $re)
     {
         Field::create([
-            'estate_id' => $re->estate,
+            'divisi_id' => $re->divisi,
             'field_no' => $re->field_no,
             'field_bantu' => $re->field_bantu,
             'hektar' => $re->hektar,

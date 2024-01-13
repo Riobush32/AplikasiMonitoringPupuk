@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fields', function (Blueprint $table) {
+        Schema::create('semesters', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('divisi_id');
-            $table->string('field_no');
-            $table->string('field_bantu');
-            $table->double('hektar');
-            $table->integer('treess');
+            $table->foreignId('field_id');
+            $table->integer('semester');
+            $table->date('date');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fields');
+        Schema::dropIfExists('semesters');
     }
 };

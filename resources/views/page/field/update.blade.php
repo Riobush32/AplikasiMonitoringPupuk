@@ -8,8 +8,8 @@
             <h3 class="font-bold text-lg">Field No</h3>
             <form action="{{ url("/field/$item->id/update") }}" method="POST">
                 @csrf @method('PATCH')
-                <input type="hidden" class="input input-bordered w-full max-w-xs" name="estate"
-                    value="{{ $estate }}" />
+                <input type="hidden" class="input input-bordered w-full max-w-xs" name="divisi"
+                    value="{{ $divisi }}" />
                 <label class="form-control w-full max-w-xs">
                     <div class="label">
                         <span class="label-text">Field No</span>

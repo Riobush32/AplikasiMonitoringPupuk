@@ -21,40 +21,37 @@
                     <form method="dialog">
                         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 class="font-bold text-lg">Add Field</h3>
-                    <form action="{{ url('/field') }}" method="POST">
+                    <h3 class="font-bold text-lg">Add {{ $title }}</h3>
+                    <form action="{{ url('/pemupukan') }}" method="POST">
                         @csrf
-                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="divisi" value="{{ $divisi }}"/>
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="semester" value="{{ $semester }}"/>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
-                                <span class="label-text">Field No</span>
+                                <span class="label-text">Status</span>
                             </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="field_no" />
-
+                            <select class="input input-bordered" name="status">
+                                <option disabled selected>Pilih Status</option>
+                                <option value="actual">Actual</option>
+                                <option value="recomendation">Recomendation</option>
+                            </select>
                         </label>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
-                                <span class="label-text">Field Bantu</span>
+                                <span class="label-text">Pupuk</span>
                             </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="field_bantu" />
-
+                            <select class="input input-bordered" name="pupuk">
+                                <option disabled selected>Pilih Pupuk</option>
+                                @foreach ($pupuks as $pupuk)
+                                    <option value="{{ $pupuk->id }}">{{ $pupuk->pupuk }}</option>
+                                @endforeach
+                            </select>
                         </label>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
-                                <span class="label-text">Hektar</span>
+                                <span class="label-text">Total</span>
                             </div>
                             <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="hektar" />
-
-                        </label>
-                        <label class="form-control w-full max-w-xs">
-                            <div class="label">
-                                <span class="label-text">Treess</span>
-                            </div>
-                            <input type="number" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="treess" />
+                                name="total" />
 
                         </label>
 
