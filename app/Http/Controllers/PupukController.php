@@ -27,9 +27,9 @@ class PupukController extends Controller
 
     public function update(Request $re, $id)
     {
-        $field = Pupuk::find($id);
+        $data = Pupuk::find($id);
 
-        $field->update([
+        $data->update([
             'pupuk' => $re->pupuk,
         ]);
         return back();

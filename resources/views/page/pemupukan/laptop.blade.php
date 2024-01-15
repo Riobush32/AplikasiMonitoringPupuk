@@ -1,41 +1,84 @@
 {{-- laptop display --}}
-<div class="card w-full overflow-auto max-h-[70vh] hidden md:block">
+<div class="card w-full overflow-auto max-h-[70vh] ">
     <div class="overflow-x-auto">
-        <table class="table table-lg table-pin-rows table-pin-cols">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <td>Status</td>
-                    <td>Pupuk</td>
-                    <td>Total</td>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $n=0; ?>
-                @foreach($data as $item)
-                <?php $n++; ?>
-                <tr>
-                    <th>{{ $n; }}</th>
-                    <td>{{ $item->status }}</td>
-                    <td>{{ $item->pupuks->pupuk }}</td>
-                    <td>{{ $item->total }}</td>
-                    <td>
-                        @include('components.control-button')
-                    </td>
+        <!-- component -->
+        <div class="flex flex-col gap-2 mt-4">
+            <!-- Card component -->
+            {{-- Actual --}}
+            <div class="px-4 sm:px-0">
+                <h3 class="text-base font-semibold leading-7 text-gray-900">Actual</h3>
+                <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Detail Pupuk Actual.</p>
+            </div>
+            {{-- card pupuk --}}
+            <div class="flex flex-wrap">
+                @foreach($actual as $item)
+                    <div class="stats shadow m-1">
 
-                </tr>
+                        <div class="stat">
+                            <div class="stat-title">Total Pupuk</div>
+                            <div class="stat-value">{{ $item->pupuks->pupuk }}</div>
+                            <div class="stat-desc mt-1 flex items-center">
+                                <div class="mr-2">
+                                    {{ $item->total }} Kg
+                                </div>
+                                <div class="join ">
+                                    <button class="btn btn-info join-item btn-xs"
+                                        onclick="edit{{ $item->id }}.showModal()">
+                                        <span class="material-symbols-outlined">
+                                            edit_note
+                                        </span>
+                                    </button>
+                                    <button class="btn btn-error join-item btn-xs"
+                                        onclick="delete{{ $item->id }}.showModal()">
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 @endforeach
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>No</th>
-                    <td>Status</td>
-                    <td>Pupuk</td>
-                    <td>Total</td>
-                    <th></th>
-                </tr>
-            </tfoot>
-        </table>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2 mt-4">
+            <!-- Card component -->
+            {{-- Recomendation --}}
+            <div class="px-4 sm:px-0">
+                <h3 class="text-base font-semibold leading-7 text-gray-900">Recomendation</h3>
+                <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Detail Pupuk Recomendasi.</p>
+            </div>
+            {{-- card pupuk --}}
+            <div class="flex flex-wrap">
+                @foreach($recomendation as $item)
+                    <div class="stats shadow m-1">
+
+                        <div class="stat">
+                            <div class="stat-title">Total Pupuk</div>
+                            <div class="stat-value">{{ $item->pupuks->pupuk }}</div>
+                            <div class="stat-desc mt-1 flex items-center">
+                                <div class="mr-2">
+                                    {{ $item->total }} Kg
+                                </div>
+                                <div class="join ">
+                                    <button class="btn btn-info join-item btn-xs" onclick="edit{{ $item->id }}.showModal()">
+                                        <span class="material-symbols-outlined">
+                                            edit_note
+                                        </span>
+                                    </button>
+                                    <button class="btn btn-error join-item btn-xs" onclick="delete{{ $item->id }}.showModal()">
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                @endforeach
+            </div>
+        </div>
     </div>
 </div>

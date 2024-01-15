@@ -14,7 +14,7 @@
                         <span class="label-text">Semester</span>
                     </div>
                     <select class="input input-bordered" name="semester">
-                        <option disabled selected value="{{ $item->semester }}">Semester{{ $item->semester }}</option>
+                        <option value="{{ $item->semester }}">Semester{{ $item->semester }}</option>
                         <option value="1">1 (satu)</option>
                         <option value="2">2 (dua)</option>
                     </select>

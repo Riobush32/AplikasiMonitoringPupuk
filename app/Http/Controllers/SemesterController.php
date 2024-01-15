@@ -30,9 +30,9 @@ class SemesterController extends Controller
 
     public function update(Request $re, $id)
     {
-        $field = Semester::find($id);
+        $data = Semester::find($id);
 
-        $field->update([
+        $data->update([
             'field_id' => $re->field_id,
             'semester' => $re->semester,
             'date' => $re->date,

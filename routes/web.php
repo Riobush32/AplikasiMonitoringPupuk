@@ -21,7 +21,7 @@ use App\Models\DataPemupukan;
 */
 
 Route::get('/', function () {
-    return view('page.home');
+    return view('home.home');
 });
 
 Route::get('/page2', function () {
@@ -68,3 +68,5 @@ Route::delete('/pupuk/{id}/destroy', [PupukController::class, 'destroy']);
 
 Route::get('semester/{id}', [DataPemupukanController::class, 'index']);
 Route::post('/pemupukan', [DataPemupukanController::class, 'create']);
+Route::patch('/pemupukan/{id}/update', [DataPemupukanController::class, 'update']);
+Route::delete('/pemupukan/{id}/destroy', [DataPemupukanController::class, 'destroy']);

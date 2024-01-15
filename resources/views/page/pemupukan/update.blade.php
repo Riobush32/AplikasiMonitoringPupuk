@@ -7,16 +7,14 @@
             </form>
             <h3 class="font-bold text-lg">{{ $title }}</h3>
             <form action="{{ url("/pemupukan/$item->id/update") }}" method="POST">
-                @csrf @method('PATCH')<input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="semester"
-                    value="{{ $semester }}" />
+                @csrf @method('PATCH')
+                
                 <label class="form-control w-full max-w-xs">
                     <div class="label">
                         <span class="label-text">Status</span>
                     </div>
-                    <select class="input input-bordered" name="status">
-                        <option disabled selected value="{{ $item->status }}">{{ $item->status }}</option>
-                        <option value="actual">Actual</option>
-                        <option value="recomendation">Recomendation</option>
+                    <select class="input input-bordered" name="status" disabled>
+                        <option value="{{ $item->status }}">{{ $item->status }}</option>
                     </select>
                 </label>
                 <label class="form-control w-full max-w-xs">
@@ -24,7 +22,7 @@
                         <span class="label-text">Pupuk</span>
                     </div>
                     <select class="input input-bordered" name="pupuk">
-                        <option disabled selected value="{{ $item->pupuk}}">{{ $item->pupuk }}</option>
+                        <option disabled selected value="{{ $item->pupuk_id}}">{{ $item->pupuks->pupuk }}</option>
                         @foreach ($pupuks as $pupuk)
                         <option value="{{ $pupuk->id }}">{{ $pupuk->pupuk }}</option>
                         @endforeach
@@ -34,7 +32,7 @@
                     <div class="label">
                         <span class="label-text">Total</span>
                     </div>
-                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="total" />
+                    <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="total" value="{{ $item->total }}"/>
                 
                 </label>
                 <div class="modal-action">
