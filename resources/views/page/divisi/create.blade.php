@@ -10,6 +10,11 @@
                     note_add
                 </span>
             </button>
+            <a href="javascript:history.back()" class="btn btn-outline btn-error ml-2">
+                <span class="material-symbols-outlined">
+                    undo
+                </span>
+            </a>
             <dialog id="add" class="modal">
                 <div class="modal-box">
                     <form method="dialog">
@@ -24,7 +29,8 @@
                             </div>
                             <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
                                 name="devisi" />
-                            <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="estate" value="{{ $estate }}"/>
+                            <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                                name="estate" value="{{ $estate }}" />
 
                         </label>
                         <div class="modal-action">

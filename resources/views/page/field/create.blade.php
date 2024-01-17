@@ -11,7 +11,7 @@
                     note_add
                 </span>
             </button>
-            <a href="{{ url("/estate/") }}" class="btn btn-outline btn-error ml-2">
+            <a href="javascript:history.back()" class="btn btn-outline btn-error ml-2">
                 <span class="material-symbols-outlined">
                     undo
                 </span>

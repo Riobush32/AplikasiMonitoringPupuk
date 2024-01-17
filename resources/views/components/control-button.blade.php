@@ -1,5 +1,5 @@
 <div class="join">
-    <a href="{{ url("/$active/$item->id") }}"  class="btn btn-success join-item">
+    <a href="{{ url("/$active/$item->id/") }}"  class="btn btn-success join-item">
         <span class="material-symbols-outlined">
             folder_open
         </span>

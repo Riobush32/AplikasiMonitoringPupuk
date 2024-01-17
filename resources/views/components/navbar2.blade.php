@@ -17,7 +17,6 @@
                     <img class="mask mask-squircle w-12" src="{{ asset('img/bsp-logo-png.png') }}" />
                     <a class="btn btn-ghost normal-case text-xl md:hidden">BSP</a>
         </div>
-        
         <div class="dropdown dropdown-bottom dropdown-end">
             <div tabindex="12" role="button" class="btn btn-sm btn-ghost m-1">
                 <span class="material-symbols-outlined">

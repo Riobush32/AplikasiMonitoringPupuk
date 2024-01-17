@@ -21,7 +21,9 @@ use App\Models\DataPemupukan;
 */
 
 Route::get('/', function () {
-    return view('home.home');
+    return view('home.home',[
+        'active' => ''
+    ]);
 });
 
 Route::get('/page2', function () {
@@ -38,7 +40,7 @@ Route::delete('/estate/{id}/destroy', [EstateController::class, 'destroy']);
 
 // devisi route
 
-Route::get('/estate/{id}', [DivisiController::class, 'index']);
+Route::get('/estate/{id}/', [DivisiController::class, 'index']);
 Route::post('/divisi', [DivisiController::class, 'create']);
 Route::patch('/divisi/{id}/update', [DivisiController::class, 'update']);
 Route::delete('divisi/{id}/destroy', [DivisiController::class, 'destroy']);

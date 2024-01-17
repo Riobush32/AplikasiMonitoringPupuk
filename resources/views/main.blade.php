@@ -15,8 +15,8 @@
         @vite('resources/css/app.css')
 </head>
 
-<body class="bg-primary absolute w-full h-full bg-opacity-30">
-    <div class="relative w-[98vw] mx-auto">
+<body class="bg-primary py-3 w-full h-full bg-opacity-30 min-h-screen">
+    <div class="w-[98vw] mx-auto">
         @include('components.navbar')
         @include('components.sidebar')
 
@@ -25,7 +25,11 @@
     </div>
 
 
-
+<script>
+    function goBack() {
+      window.history.back();
+    }
+</script>
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
     @livewireScripts
 </body>

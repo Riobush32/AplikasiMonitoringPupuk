@@ -5,7 +5,7 @@
             <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         </form>
         <h3 class="font-bold text-lg">Field No</h3>
-        <p>Are you sure to delete {{ $item->field_no }}/{{ $item->field_bantu }} field?</p>
+        <p>Are you sure to delete {{ $item->pupuks->pupuk }} ?</p>
         <form action="{{ url("/field/$item->id/destroy") }}" method="POST">
             @csrf @method('delete')
 
