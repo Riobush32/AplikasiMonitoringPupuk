@@ -6,6 +6,10 @@
                 <tr>
                     <th>No</th>
                     <td>Semester</td>
+                    <td>SPH</td>
+                    <td>SLU</td>
+                    <td>Matherial</td>
+                    <td>Type Of Soil</td>
                     <td>Tanggal</td>
                     <th></th>
                 </tr>
@@ -17,6 +21,10 @@
                 <tr>
                     <th>{{ $n; }}</th>
                     <td>{{ $item->semester }}</td>
+                    <td>{{ $item->sph }}</td>
+                    <td>{{ $item->slu }}</td>
+                    <td>{{ $item->matherial }}</td>
+                    <td>{{ $item->type_of_soil }}</td>
                     <td>{{ $item->date }}</td>
                     <td>
                         @include('components.control-button')
@@ -27,10 +35,13 @@
             </tbody>
             <tfoot>
                 <tr>
-                      <th>No</th>
+                    <th>No</th>
                     <td>Semester</td>
+                    <td>SPH</td>
+                    <td>SLU</td>
+                    <td>Matherial</td>
+                    <td>Type Of Soil</td>
                     <td>Tanggal</td>
-                    <th></th>
                     <th></th>
                 </tr>
             </tfoot>

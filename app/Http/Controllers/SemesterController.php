@@ -22,6 +22,10 @@ class SemesterController extends Controller
         Semester::create([
             'field_id' => $re->field_id,
             'semester' => $re->semester,
+            'sph' => $re->sph,
+            'matherial' => $re->matherial,
+            'type_of_soil' => $re->tos,
+            'slu' => $re->slu,
             'date' => $re->date,
         ]);
 
@@ -35,6 +39,10 @@ class SemesterController extends Controller
         $data->update([
             'field_id' => $re->field_id,
             'semester' => $re->semester,
+            'sph' => $re->sph,
+            'matherial' => $re->matherial,
+            'type_of_soil' => $re->tos,
+            'slu' => $re->slu,
             'date' => $re->date,
         ]);
         return back();
@@ -44,5 +52,10 @@ class SemesterController extends Controller
     {
         Semester::find($id)->delete();
         return back();
+    }
+
+    public function print()
+    {
+        return view('page.semester.laporan');
     }
 }

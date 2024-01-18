@@ -3,7 +3,7 @@
     <div class="card-body ">
         <div class="w-full flex items-center">
             <div class="flex-1">
-                
+
                 <h2 class="card-title text-md md:text-lg">{{ $title }} </h2>
             </div>
             <button class="btn btn-primary" onclick="add.showModal()">
@@ -24,7 +24,8 @@
                     <h3 class="font-bold text-lg">Add {{ $title }}</h3>
                     <form action="{{ url('/semester') }}" method="POST">
                         @csrf
-                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="field_id" value="{{ $field }}"/>
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                            name="field_id" value="{{ $field }}" />
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
                                 <span class="label-text">Semester</span>
@@ -41,6 +42,38 @@
                             </div>
                             <input type="date" placeholder="Type here" class="input input-bordered w-full max-w-xs"
                                 name="date" />
+
+                        </label>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text">SPH</span>
+                            </div>
+                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                                name="sph" />
+
+                        </label>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text">Matherial</span>
+                            </div>
+                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                                name="matherial" />
+
+                        </label>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text">Type Of Soil</span>
+                            </div>
+                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                                name="tos" />
+
+                        </label>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text">SLU</span>
+                            </div>
+                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                                name="slu" />
 
                         </label>
 

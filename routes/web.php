@@ -58,6 +58,7 @@ Route::get('/field/{id}', [SemesterController::class, 'index']);
 Route::post('/semester', [SemesterController::class, 'create']);
 Route::patch('semester/{id}/update', [SemesterController::class, 'update']);
 Route::delete('/semester/{id}/destroy', [SemesterController::class, 'destroy']);
+Route::get('/semester/print', [SemesterController::class, 'print']);
 
 //  pupuk Route
 

@@ -17,7 +17,7 @@
                     <th>{{ $n; }}</th>
                     <td>{{ $item->pupuk }}</td>
                     <td>
-                        @include('components.control-button2')
+                        @include('components.control-button')
                     </td>
 
                 </tr>

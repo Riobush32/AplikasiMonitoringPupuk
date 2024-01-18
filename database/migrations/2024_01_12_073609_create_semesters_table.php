@@ -18,6 +18,10 @@ return new class extends Migration
             $table->foreignId('field_id');
             $table->integer('semester');
             $table->date('date');
+            $table->double('sph');
+            $table->string('matherial');
+            $table->string('type_of_soil');
+            $table->string('slu');
             $table->timestamps();
         });
     }

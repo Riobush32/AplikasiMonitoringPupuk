@@ -26,6 +26,34 @@
                     <input type="date" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="date" value="{{ $item->date }}"/>
                 
                 </label>
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text">SPH</span>
+                    </div>
+                    <input value="{{ $item->sph }}" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="sph" />
+                
+                </label>
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text">Matherial</span>
+                    </div>
+                    <input value="{{ $item->matherial }}" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="matherial" />
+                
+                </label>
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text">Type Of Soil</span>
+                    </div>
+                    <input value="{{ $item->type_of_soil }}" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="tos" />
+                
+                </label>
+                <label class="form-control w-full max-w-xs">
+                    <div class="label">
+                        <span class="label-text">SLU</span>
+                    </div>
+                    <input value="{{ $item->slu }}" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="slu" />
+                
+                </label>
                 <div class="modal-action">
                     <button class="btn btn-info btn-outline" type="submit">
                         <span class="material-symbols-outlined">

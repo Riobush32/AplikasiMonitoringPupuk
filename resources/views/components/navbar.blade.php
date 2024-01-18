@@ -22,6 +22,7 @@
         <a href="{{ route('register') }}"
             class="btn btn-outline btn-primary border-none btn-sm">Register</a>
     @else
+        <a href="{{ url('/estate') }}" class="btn btn-outline btn-primary border-none btn-sm">Admin</a>
         <a href="{{ route('logout') }}"
             class="btn btn-outline btn-primary border-none btn-sm">LogOut</a>
     @endguest
