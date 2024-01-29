@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\DataPemupukanController;
+use App\Models\DataPemupukan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FieldController;
 use App\Http\Controllers\PupukController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\EstateController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\SemesterController;
-use App\Models\DataPemupukan;
+use App\Http\Controllers\DataPemupukanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,7 +59,6 @@ Route::get('/field/{id}', [SemesterController::class, 'index']);
 Route::post('/semester', [SemesterController::class, 'create']);
 Route::patch('semester/{id}/update', [SemesterController::class, 'update']);
 Route::delete('/semester/{id}/destroy', [SemesterController::class, 'destroy']);
-Route::get('/semester/print', [SemesterController::class, 'print']);
 
 //  pupuk Route
 
@@ -73,3 +73,7 @@ Route::get('semester/{id}', [DataPemupukanController::class, 'index']);
 Route::post('/pemupukan', [DataPemupukanController::class, 'create']);
 Route::patch('/pemupukan/{id}/update', [DataPemupukanController::class, 'update']);
 Route::delete('/pemupukan/{id}/destroy', [DataPemupukanController::class, 'destroy']);
+
+// Route Laporan
+Route::get('/laporan/print', [LaporanController::class, 'index']);
+

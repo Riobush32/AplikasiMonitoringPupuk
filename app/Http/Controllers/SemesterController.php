@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Field;
 use App\Models\Semester;
 use Illuminate\Http\Request;
 
@@ -9,10 +10,14 @@ class SemesterController extends Controller
 {
     public function index ($id)
     {
+        $field = Field::where('id', $id)->first();
+
         return view('page.semester.index', [
             'title' => 'Semester',
             'active' => 'semester',
             'field' => $id,
+            'divisi' => $field->divisi_id,
+            'estate' => $field->estate_id,
             'data' => Semester::where('field_id', $id)->latest()->get()
         ]);
     }
@@ -20,9 +25,10 @@ class SemesterController extends Controller
     public function create (Request $re)
     {
         Semester::create([
+            'estate_id' => $re->estate,
+            'divisi_id' => $re->divisi,
             'field_id' => $re->field_id,
             'semester' => $re->semester,
-            'sph' => $re->sph,
             'matherial' => $re->matherial,
             'type_of_soil' => $re->tos,
             'slu' => $re->slu,
@@ -39,7 +45,6 @@ class SemesterController extends Controller
         $data->update([
             'field_id' => $re->field_id,
             'semester' => $re->semester,
-            'sph' => $re->sph,
             'matherial' => $re->matherial,
             'type_of_soil' => $re->tos,
             'slu' => $re->slu,

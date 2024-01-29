@@ -28,13 +28,6 @@
                 </label>
                 <label class="form-control w-full max-w-xs">
                     <div class="label">
-                        <span class="label-text">SPH</span>
-                    </div>
-                    <input value="{{ $item->sph }}" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="sph" />
-                
-                </label>
-                <label class="form-control w-full max-w-xs">
-                    <div class="label">
                         <span class="label-text">Matherial</span>
                     </div>
                     <input value="{{ $item->matherial }}" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="matherial" />

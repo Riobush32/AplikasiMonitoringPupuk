@@ -21,10 +21,12 @@
                     <form method="dialog">
                         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 class="font-bold text-lg">Add Field</h3>
+                    <h3 class="font-bold text-lg">Add Field </h3>
                     <form action="{{ url('/field') }}" method="POST">
                         @csrf
                         <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="divisi" value="{{ $divisi }}"/>
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="estate_id"
+                            value="{{ $estate_id }}" />
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
                                 <span class="label-text">Field No</span>

@@ -7,12 +7,12 @@
     </a>
     @endif
 
-    @if ($title == 'Semester')
-    <a class="btn btn-neutral join-item" href="{{ url("/$active/print") }}">
+    @if ($title == 'Estate')
+    <button class="btn btn-neutral join-item" onclick="print{{ $item->id }}.showModal()">
         <span class="material-symbols-outlined">
             print
         </span>
-    </a>
+    </button>
     @endif
 
     <button class="btn btn-info join-item" onclick="edit{{ $item->id }}.showModal()">

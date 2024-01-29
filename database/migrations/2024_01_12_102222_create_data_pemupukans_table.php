@@ -15,10 +15,14 @@ return new class extends Migration
     {
         Schema::create('data_pemupukans', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('estate_id');
+            $table->foreignId('divisi_id');
+            $table->foreignId('field_id');
             $table->foreignId('semester_id');
             $table->string('status');
             $table->foreignId('pupuk_id');
             $table->double('total');
+            $table->double('req');
             $table->timestamps();
         });
     }

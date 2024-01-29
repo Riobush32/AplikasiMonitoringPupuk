@@ -25,6 +25,12 @@
                     <form action="{{ url('/pemupukan') }}" method="POST">
                         @csrf
                         <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="semester" value="{{ $semester }}"/>
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="field"
+                            value="{{ $field }}" />
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="estate"
+                            value="{{ $estate }}" />
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="divisi"
+                            value="{{ $divisi }}" />
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
                                 <span class="label-text">Status</span>

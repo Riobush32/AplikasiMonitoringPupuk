@@ -11,9 +11,14 @@ class Field extends Model
 
     protected $guarded = [];
 
+    public function estates()
+    {
+        return $this->belongsTo(Estate::class, 'estate_id', 'id');
+    }
+
     public function divisis()
     {
-        return $this->belongsTo(Divisi::class);
+        return $this->belongsTo(Divisi::class, 'divisi_id', 'id');
     }
 
     public function semester()

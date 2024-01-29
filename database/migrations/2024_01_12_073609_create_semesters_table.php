@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('semesters', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('estate_id');
+            $table->foreignId('divisi_id');
             $table->foreignId('field_id');
             $table->integer('semester');
             $table->date('date');
-            $table->double('sph');
             $table->string('matherial');
             $table->string('type_of_soil');
             $table->string('slu');

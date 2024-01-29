@@ -13,7 +13,7 @@ class Divisi extends Model
 
     public function estates()
     {
-        return $this->belongsTo(Estate::class);
+        return $this->belongsTo(Estate::class, 'estate_id', 'id');
     }
     
     public function field()

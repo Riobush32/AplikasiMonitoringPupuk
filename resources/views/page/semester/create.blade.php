@@ -26,6 +26,10 @@
                         @csrf
                         <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs"
                             name="field_id" value="{{ $field }}" />
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="estate"
+                                value="{{ $estate }}" />
+                                <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="divisi"
+                                    value="{{ $divisi }}" />
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
                                 <span class="label-text">Semester</span>
@@ -42,14 +46,6 @@
                             </div>
                             <input type="date" placeholder="Type here" class="input input-bordered w-full max-w-xs"
                                 name="date" />
-
-                        </label>
-                        <label class="form-control w-full max-w-xs">
-                            <div class="label">
-                                <span class="label-text">SPH</span>
-                            </div>
-                            <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
-                                name="sph" />
 
                         </label>
                         <label class="form-control w-full max-w-xs">

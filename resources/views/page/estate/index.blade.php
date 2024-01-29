@@ -10,6 +10,7 @@
             {{-- smartphone display --}}
             @include('page.estate.phone')
             @include('page.estate.update')
+            @include('page.estate.print')
             @include('page.estate.delete')
 
 

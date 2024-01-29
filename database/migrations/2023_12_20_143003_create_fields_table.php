@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('fields', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('estate_id');
             $table->foreignId('divisi_id');
             $table->string('field_no');
             $table->string('field_bantu');
             $table->double('hektar');
+            $table->double('sph');
             $table->integer('treess');
             $table->timestamps();
         });

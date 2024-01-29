@@ -6,7 +6,6 @@
                 <tr>
                     <th>No</th>
                     <td>Semester</td>
-                    <td>SPH</td>
                     <td>SLU</td>
                     <td>Matherial</td>
                     <td>Type Of Soil</td>
@@ -21,7 +20,6 @@
                 <tr>
                     <th>{{ $n; }}</th>
                     <td>{{ $item->semester }}</td>
-                    <td>{{ $item->sph }}</td>
                     <td>{{ $item->slu }}</td>
                     <td>{{ $item->matherial }}</td>
                     <td>{{ $item->type_of_soil }}</td>

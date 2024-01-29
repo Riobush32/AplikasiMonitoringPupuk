@@ -11,9 +11,19 @@ class Semester extends Model
 
     protected $guarded = [];
 
+    public function estates()
+    {
+        return $this->belongsTo(Estate::class, 'estate_id', 'id');
+    }
+
+    public function divisis()
+    {
+        return $this->belongsTo(Divisi::class, 'divisi_id', 'id');
+    }
+
     public function fields()
     {
-        return $this->belongsTo(Field::class);
+        return $this->belongsTo(Field::class, 'field_id', 'id');
     }
 
     public function datapemupukan()

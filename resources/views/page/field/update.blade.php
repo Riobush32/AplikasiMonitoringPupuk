@@ -10,6 +10,8 @@
                 @csrf @method('PATCH')
                 <input type="hidden" class="input input-bordered w-full max-w-xs" name="divisi"
                     value="{{ $divisi }}" />
+                    <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="estate_id"
+                        value="{{ $estate_id }}" />
                 <label class="form-control w-full max-w-xs">
                     <div class="label">
                         <span class="label-text">Field No</span>
