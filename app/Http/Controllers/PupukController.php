@@ -37,7 +37,8 @@ class PupukController extends Controller
 
     public function destroy($id) 
     {
-        Pupuk::find($id)->delete();
+        $pupuk = Pupuk::find($id);
+        $pupuk->delete();
         return back();
     }
 }

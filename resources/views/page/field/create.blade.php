@@ -3,7 +3,7 @@
     <div class="card-body ">
         <div class="w-full flex items-center">
             <div class="flex-1">
-                
+
                 <h2 class="card-title text-md md:text-lg">{{ $title }} </h2>
             </div>
             <button class="btn btn-primary" onclick="add.showModal()">
@@ -24,9 +24,10 @@
                     <h3 class="font-bold text-lg">Add Field </h3>
                     <form action="{{ url('/field') }}" method="POST">
                         @csrf
-                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="divisi" value="{{ $divisi }}"/>
-                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs" name="estate_id"
-                            value="{{ $estate_id }}" />
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                            name="divisi" value="{{ $divisi }}" />
+                        <input type="hidden" placeholder="Type here" class="input input-bordered w-full max-w-xs"
+                            name="estate_id" value="{{ $estate_id }}" />
                         <label class="form-control w-full max-w-xs">
                             <div class="label">
                                 <span class="label-text">Field No</span>
@@ -42,6 +43,16 @@
                             <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs"
                                 name="field_bantu" />
 
+                        </label>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text">Jenis</span>
+                            </div>
+                            <select class="input input-bordered" name="jenis">
+                                <option disabled selected>Pilih Jenis</option>
+                                <option value="palm">Palm</option>
+                                <option value="rubber">Rubber</option>
+                            </select>
                         </label>
                         <label class="form-control w-full max-w-xs">
                             <div class="label">

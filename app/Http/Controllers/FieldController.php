@@ -32,6 +32,7 @@ class FieldController extends Controller
             'divisi_id' => $re->divisi,
             'field_no' => $re->field_no,
             'field_bantu' => $re->field_bantu,
+            'jenis' => $re->jenis,
             'hektar' => $hektar,
             'treess' => $treess,
             'sph' => $sph
@@ -53,7 +54,8 @@ class FieldController extends Controller
             'field_bantu' => $re->field_bantu,
             'hektar' => $hektar,
             'treess' => $treess,
-            'sph' => $sph
+            'sph' => $sph,
+            'jenis' => $re->jenis
         ]);
         return back();
     }

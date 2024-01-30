@@ -34,46 +34,46 @@ Route::get('/page2', function () {
 
 // estate route 
 
-Route::get('/estate', [EstateController::class, 'index'])->name('estate');
-Route::post('/estate', [EstateController::class, 'create']);
-Route::patch('/estate/{id}/update', [EstateController::class, 'update']);
-Route::delete('/estate/{id}/destroy', [EstateController::class, 'destroy']);
+Route::get('/estate', [EstateController::class, 'index'])->name('estate')->middleware('auth');
+Route::post('/estate', [EstateController::class, 'create'])->middleware('auth');
+Route::patch('/estate/{id}/update', [EstateController::class, 'update'])->middleware('auth');
+Route::delete('/estate/{id}/destroy', [EstateController::class, 'destroy'])->middleware('auth');
 
 // devisi route
 
-Route::get('/estate/{id}/', [DivisiController::class, 'index']);
-Route::post('/divisi', [DivisiController::class, 'create']);
-Route::patch('/divisi/{id}/update', [DivisiController::class, 'update']);
-Route::delete('divisi/{id}/destroy', [DivisiController::class, 'destroy']);
+Route::get('/estate/{id}/', [DivisiController::class, 'index'])->middleware('auth');
+Route::post('/divisi', [DivisiController::class, 'create'])->middleware('auth');
+Route::patch('/divisi/{id}/update', [DivisiController::class, 'update'])->middleware('auth');
+Route::delete('divisi/{id}/destroy', [DivisiController::class, 'destroy'])->middleware('auth');
 
 // Field Route
 
-Route::get('/divisi/{id}', [FieldController::class, 'index'])->name('field');
-Route::post('/field', [FieldController::class, 'create']);
-Route::patch('field/{id}/update', [FieldController::class, 'update']);
-Route::delete('/field/{id}/destroy', [FieldController::class, 'destroy']);
+Route::get('/divisi/{id}', [FieldController::class, 'index'])->middleware('auth')->name('field')->middleware('auth');
+Route::post('/field', [FieldController::class, 'create'])->middleware('auth');
+Route::patch('field/{id}/update', [FieldController::class, 'update'])->middleware('auth');
+Route::delete('/field/{id}/destroy', [FieldController::class, 'destroy'])->middleware('auth');
 
 //semester Route 
 
-Route::get('/field/{id}', [SemesterController::class, 'index']);
-Route::post('/semester', [SemesterController::class, 'create']);
-Route::patch('semester/{id}/update', [SemesterController::class, 'update']);
-Route::delete('/semester/{id}/destroy', [SemesterController::class, 'destroy']);
+Route::get('/field/{id}', [SemesterController::class, 'index'])->middleware('auth');
+Route::post('/semester', [SemesterController::class, 'create'])->middleware('auth');
+Route::patch('semester/{id}/update', [SemesterController::class, 'update'])->middleware('auth');
+Route::delete('/semester/{id}/destroy', [SemesterController::class, 'destroy'])->middleware('auth');
 
 //  pupuk Route
 
-Route::get('/pupuk', [PupukController::class, 'index']);
-Route::post('/pupuk', [PupukController::class, 'create']);
-Route::patch('/pupuk/{id}/update', [PupukController::class, 'update']);
-Route::delete('/pupuk/{id}/destroy', [PupukController::class, 'destroy']);
+Route::get('/pupuk', [PupukController::class, 'index'])->middleware('auth');
+Route::post('/pupuk', [PupukController::class, 'create'])->middleware('auth');
+Route::patch('/pupuk/{id}/update', [PupukController::class, 'update'])->middleware('auth');
+Route::delete('/pupuk/{id}/destroy', [PupukController::class, 'destroy'])->middleware('auth');
 
 // data pemupukan Route
 
-Route::get('semester/{id}', [DataPemupukanController::class, 'index']);
-Route::post('/pemupukan', [DataPemupukanController::class, 'create']);
-Route::patch('/pemupukan/{id}/update', [DataPemupukanController::class, 'update']);
-Route::delete('/pemupukan/{id}/destroy', [DataPemupukanController::class, 'destroy']);
+Route::get('semester/{id}', [DataPemupukanController::class, 'index'])->middleware('auth');
+Route::post('/pemupukan', [DataPemupukanController::class, 'create'])->middleware('auth');
+Route::patch('/pemupukan/{id}/update', [DataPemupukanController::class, 'update'])->middleware('auth');
+Route::delete('/pemupukan/{id}/destroy', [DataPemupukanController::class, 'destroy'])->middleware('auth');
 
 // Route Laporan
-Route::get('/laporan/print', [LaporanController::class, 'index']);
+Route::get('/laporan/print', [LaporanController::class, 'index'])->middleware('auth');
 

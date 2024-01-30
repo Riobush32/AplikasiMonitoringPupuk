@@ -20,10 +20,13 @@
             edit_note
         </span>
     </button>
+    @if ($title != 'Pupuk')
     <button class="btn btn-error join-item" onclick="delete{{ $item->id }}.showModal()">
         <span class="material-symbols-outlined">
             delete
         </span>
     </button>
+    @endif
+
 
 </div>

@@ -22,7 +22,7 @@
                         <span class="label-text">Pupuk</span>
                     </div>
                     <select class="input input-bordered" name="pupuk">
-                        <option disabled selected value="{{ $item->pupuk_id}}">{{ $item->pupuks->pupuk }}</option>
+                        <option selected value="{{ $item->pupuk_id}}">{{ $item->pupuks->pupuk }}</option>
                         @foreach ($pupuks as $pupuk)
                         <option value="{{ $pupuk->id }}">{{ $pupuk->pupuk }}</option>
                         @endforeach

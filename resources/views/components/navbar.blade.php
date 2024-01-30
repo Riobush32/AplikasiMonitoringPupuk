@@ -9,7 +9,8 @@
         </label>
     </div>
     <div class="flex-1 hidden md:flex ml-9">
-        <img class="mask mask-squircle w-12" src="{{ asset('img/bsp-logo-png.png') }}" />
+        
+        <img class="mask mask-squircle w-12 " src="{{ asset('img/bsp-logo-png.png') }}" />
         <a class="btn btn-ghost normal-case text-xl ">Bakerie Sumatera Plantations</a>
     </div>
     <div class="flex-1 md:hidden ">
@@ -17,14 +18,18 @@
         <a class="btn btn-ghost normal-case text-xl md:hidden">BSP</a>
     </div>
     @guest
-        <a href="{{ route('login') }}"
-            class="btn btn-outline btn-primary border-none btn-sm">Login</a>
-        <a href="{{ route('register') }}"
-            class="btn btn-outline btn-primary border-none btn-sm">Register</a>
+    <a href="{{ route('login') }}" class="btn btn-outline btn-primary border-none btn-sm">Login</a>
+    <a href="{{ route('register') }}" class="btn btn-outline btn-primary border-none btn-sm">Register</a>
     @else
-        <a href="{{ url('/estate') }}" class="btn btn-outline btn-primary border-none btn-sm">Admin</a>
-        <a href="{{ route('logout') }}"
-            class="btn btn-outline btn-primary border-none btn-sm">LogOut</a>
+    <a href="{{ url('/estate') }}" class="btn btn-outline btn-primary border-none btn-sm">Admin</a>
+
+    <a href="{{ route('logout') }}" class="btn btn-outline btn-primary border-none btn-sm" onclick="event.preventDefault(); 
+                                        document.getElementById('logout-form').submit();">
+        LogOut
+    </a>
+    <form action="{{ route('logout') }}" method="POST" id="logout-form">
+        @csrf
+    </form>
     @endguest
 
 

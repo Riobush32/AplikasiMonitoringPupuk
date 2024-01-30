@@ -16,6 +16,19 @@
                     <option disabled selected>Pilih Status</option>
                     <option value="actual">Actual</option>
                     <option value="recomendation">Recomendation</option>
+                    <option value="vs">Recomendation vs Actual</option>
+
+                </select>
+            </label>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                    <span class="label-text">Jenis Perkebunan</span>
+                </div>
+                <select class="input input-bordered" name="jenis">
+                    <option disabled selected>Pilih Status</option>
+                    <option value="palm">Palm</option>
+                    <option value="rubber">Rubber</option>
+            
                 </select>
             </label>
             <label class="form-control w-full max-w-xs">

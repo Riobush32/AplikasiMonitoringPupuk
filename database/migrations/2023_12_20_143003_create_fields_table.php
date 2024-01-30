@@ -18,7 +18,8 @@ return new class extends Migration
             $table->foreignId('estate_id');
             $table->foreignId('divisi_id');
             $table->string('field_no');
-            $table->string('field_bantu');
+            $table->string('field_bantu')->nullable();
+            $table->string('jenis');
             $table->double('hektar');
             $table->double('sph');
             $table->integer('treess');

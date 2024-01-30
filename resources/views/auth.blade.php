@@ -11,8 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    @livewireStyles
-        @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{ asset('/build/assets/app-46acd385.css') }}">
 </head>
 
 <body class="bg-primary py-3 w-full h-full bg-opacity-30">
@@ -26,7 +25,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
-    @livewireScripts
+    <script src="{{ asset('/build/assets/app-22ff5d15.js') }}"></script>
 </body>
 
 </html>
